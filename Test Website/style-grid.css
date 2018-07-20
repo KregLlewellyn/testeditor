@@ -1,4 +1,28 @@
 html, body {
-  margin: 0px;
-  
+  height: 100vh;
+}
+
+Body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 27% 27% 27%; 
+  grid-template-rows: 8% 30% auto 10%;
+  grid-template-areas:
+  "
+  sidebar header header header
+  sidebar section section section
+  sidebar main main main
+  sidebar footer footer footer
+  "
+}
+
+aside {
+ grid-area: sidebar;
+ background-color: blue
+}
+
+header {
+ grid-area: sidebarheader;
+ background-color: aqua
+
 }
