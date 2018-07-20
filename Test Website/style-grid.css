@@ -1,26 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Markazi+Text|Montserrat:300');
-
 html, body {
-    margin: 0px;
-   font-family: Montserrat
-   , sans-serif;
-   height: 100%;
-}
-
-Body {
-   background-color: rgb(141, 95, 74);
-   background-size: cover;
-}
-
-#container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 10px;
-
-}
-h1{
-  font-family: fantasy;
-  font-size: 50px;
-  padding: 50px;
+  margin: 0px;
+  
 }
