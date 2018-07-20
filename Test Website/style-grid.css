@@ -4,16 +4,17 @@ html, body {
 
 Body {
   margin: 0;
+  background-color: rgb(202, 198, 191);
   display: grid;
-  grid-template-columns: auto 27% 27% 27%; 
-  grid-template-rows: 8% 30% auto 10%;
+  grid-template-columns: 1fr 1fr 1fr 1fr ; 
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
   grid-template-areas:
-  "
-  sidebar header header header
-  sidebar section section section
-  sidebar main main main
-  sidebar footer footer footer
-  "
+    " sidebar header  header    header"
+    " sidebar section section  section"
+    " sidebar main    main     main"
+    " sidebar footer  footer   footer"
+ 
 }
 
 aside {
@@ -22,7 +23,24 @@ aside {
 }
 
 header {
- grid-area: sidebarheader;
+ grid-area: header;
+ background-color: rgb(18, 116, 43)
+
+}
+
+Section {
+ grid-area: section;
+ background-color: rgb(28, 27, 109)
+
+}
+footer {
+ grid-area: footer;
  background-color: aqua
+
+}
+
+main {
+ grid-area: main;
+ background-color: brown
 
 }
