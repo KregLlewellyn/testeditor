@@ -6,51 +6,90 @@ Body {
   margin: 0;
   background-color: rgb(202, 198, 191);
   display: grid;
-  grid-template-columns: auto 27% 27%  27%  ; 
+  grid-template-columns: auto 27% 27%  27%; 
   grid-template-rows: 8% 30% auto 10%;
-  grid-gap: 10px;
+  grid-gap: 5px;
   grid-template-areas:
-    " sidebar header  header    header"
+    " sidebar header  header   header"
     " sidebar sect1   sect2    sect3"
     " sidebar main    main     main"
-    " sidebar footer  footer   footer"
- 
+    " sidebar footer  footer   footer" 
 }
 
 aside {
- grid-area: sidebar;
- background-color: blue
+  grid-area: sidebar;
+  background-color: blue;
 }
 
 header {
- grid-area: header;
- background-color: rgb(18, 116, 43)
-
+  grid-area: header;
+  background-color: rgb(18, 116, 43);
 }
 
-Section:nth-of-type(1) {
- grid-area: sect1;
- background-color: rgb(45, 168, 41)
-
+#section1 {
+  grid-area: sect1;
+  background-color: rgb(45, 168, 41);
 }
-Section:nth-of-type(2) {
- grid-area: sect2;
- background-color: rgb(184, 173, 25)
 
+#section2 {
+  grid-area: sect2;
+  background-color: rgb(184, 173, 25);
 }
-Section:nth-of-type(3) {
- grid-area: sect3;
- background-color: rgb(28, 27, 109)
 
+#section3 {
+  grid-area: sect3;
+  background-color: rgb(28, 27, 109);
 }
+
 footer {
- grid-area: footer;
- background-color: aqua
-
+  grid-area: footer;
+  background-color: aqua;
 }
 
 main {
  grid-area: main;
- background-color: brown
+ background-color: brown;
+ display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+  "root1 root2"
+  "root3 root4"
+}
 
+
+#root1 {
+  grid-area: root1;
+  background-color: blue
+}
+
+#root2 {
+  grid-area: root2;
+  background-color: rgb(255, 238, 0)
+}
+
+#root3 {
+  grid-area: root3;
+  background-color: rgb(0, 255, 64)
+}
+
+#root4 {
+  grid-area: root4;
+  background-color: rgb(0, 255, 221)
+}
+
+@media screen and (max-width: 768px) {
+
+  Body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100%; 
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "sect1"
+    "sect2"
+    "sect3"
+    "main"
+    "footer"
+ }
 }
